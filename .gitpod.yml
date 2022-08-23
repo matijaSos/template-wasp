@@ -9,7 +9,7 @@ tasks:
     command: |
       export WASP_TELEMETRY_USER_ID=$GITPOD_WORKSPACE_ID
       cd MyNewApp
-      wasp start
+      REACT_APP_API_URL="https://3001-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST" wasp start
 
 ports:
   - port: 3000
